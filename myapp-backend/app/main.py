@@ -14,8 +14,6 @@ app.include_router(admin.router)
 #Allow requests from your frontend (adjust as needed)
 origins = [
     "https://vehiclemaintenance.xyz",
-    "http://102.177.72.71:3000",  # your React dev server
-    "http://localhost:3000",
 ]
 
 app.add_middleware(
