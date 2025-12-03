@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1 import users, cars, logs, admin
-from app.db.session import engine  # keep session/engine imports
-from app import models  # import your models from app/models.py
+from app.db.session import engine  
+from app import models  
 
 
 models.Base.metadata.create_all(bind=engine)
@@ -11,7 +11,7 @@ app = FastAPI()
 
 app.include_router(admin.router)
 
-#Allow requests from your frontend (adjust as needed)
+
 origins = [
     "https://vehiclemaintenance.xyz",
 ]
