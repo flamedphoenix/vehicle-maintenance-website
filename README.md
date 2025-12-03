@@ -17,6 +17,50 @@ It provides a user-friendly interface (frontend) and a backend API/server to han
 
 ## 📁 Project Structure
 
+Tech Stack
+Frontend (myapp-frontend/)
+
+Built with:
+- JavaScript – core logic and dynamic UI updates
+- HTML / CSS – page structure and styling
+- Fetch API – communicates with the backend through REST requests
+
+The frontend is responsible for:
+- User interface and interaction
+- Displaying vehicle information & maintenance logs
+- Sending requests to the FastAPI backend
+- Rendering JSON responses in the browser
+
+Backend (myapp-backend/)
+Powered by FastAPI, a modern, high-performance Python web framework.
+
+Backend features:
+- REST API endpoints for vehicles, maintenance logs, and users
+- Pydantic models for data validation
+
+The backend handles:
+- All business logic
+- Validation of incoming data
+- Interaction with the database using SQLAlchemy
+- Returning structured JSON responses to the frontend
+
+Database Layer — SQLAlchemy
+The project uses SQLAlchemy, a Python ORM, for full database management:
+- Models for Vehicles, Maintenance Records, and Users
+- Easy CRUD operations
+- Safe session management
+- Clean abstraction over SQL
+- Flexible schema evolution
+- SQLAlchemy ensures reliable, efficient database interaction with minimal boilerplate.
+
+System Architecture: 
+JavaScript Frontend
+        ↓ (API Requests)
+FastAPI Backend
+        ↓ (ORM Calls)
+  SQLAlchemy ORM
+        ↓ (SQL)
+     Database
 
 
 ## ✅ Getting Started — Installation & Setup
@@ -26,4 +70,18 @@ It provides a user-friendly interface (frontend) and a backend API/server to han
 - [Node.js](https://nodejs.org/) (for frontend)  
 - [Python](https://www.python.org/) or backend dependencies (if backend is Python)  
 - (Optionally) a database (e.g. PostgreSQL, SQLite, or whichever you configured)  
-- Git  
+- Git
+
+1) Clone the Repository
+git clone https://github.com/flamedphoenix/vehicle-maintenance-website.git
+cd vehicle-maintenance-website
+
+Backend Setup (FastAPI + SQLAlchemy)
+2) Install Backend Dependencies
+
+Inside myapp-backend/:
+
+cd myapp-backend
+pip install -r requirements.txt
+
+run deploy.sh to start the backend and frontend (ajust the script accordingly depending on your setup)
