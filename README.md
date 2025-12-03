@@ -85,7 +85,7 @@ cd myapp-backend
 pip install -r requirements.txt
 
 
-ajust the api in myapp-frontend/src/config.js for your setup
+ajust the api in myapp-frontend/src/config.js to whatever IP you are using for your backend
 ajust the api accepted in origin located in myapp-backend/app/main.py
 
 run deploy.sh to start the backend and frontend (ajust the script accordingly depending on your setup)
